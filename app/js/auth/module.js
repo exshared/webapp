@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('exsharer.auth', ['ui.router']);
+        .module('exsharer.auth', ['ui.router', 'LocalStorageModule'])
         .config(config)
         .run(run);
 
@@ -10,8 +10,21 @@
 
     };
 
-    function run(){
+    function run($rootScope, Auth){
+
+        $rootScope.$on('$stateChangeStart', function(event, toState, toParams){
+
+            console.log('khé');
+
+           if(!Auth.clientLogged()){
+               Auth.client().then(function(data){
+                   Auth.loginClient(data);
+               });
+           }
+
+
+       });
 
     };
-    
+
 })();
