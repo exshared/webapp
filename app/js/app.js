@@ -30,6 +30,7 @@
             .icon('heart', 'img/icons/heart.svg')
             .icon('border-color', 'img/icons/border-color.svg')
             .icon('key-remove', 'img/icons/key-remove.svg')
+            .icon('star-outline', 'img/icons/star-outline.svg')
             .icon('key', 'img/icons/key.svg', 24);
 
     };

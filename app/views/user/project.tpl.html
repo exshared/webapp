@@ -4,37 +4,93 @@
     <md-card style="width:70%; margin-top: -64px; z-index: 5; background-color: none;
     position: relative;"
     class="md-whiteframe-z3">
-        <md-card-content>
-            <h2 class="md-title">{{project.title}}
-                <small>
-                </small>
-            </h2>
-                <p>
-                    {{project.description}}
-                </p>
-        </md-card-content>
-        <div class="md-actions" layout="row" layout-align="end center">
-            <md-button class="md-icon-button">
-                <md-tooltip>
-                  Me gusta
-                </md-tooltip>
-                {{project.likes.length}} <md-icon md-svg-icon="heart"></md-icon>
-            </md-button>
-            <md-button class="md-icon-button">
-                <md-tooltip>
-                  Seguir
-                </md-tooltip>
-                <md-icon md-svg-icon="plus"></md-icon>
-            </md-button>
-      </div>
-    </md-card>
-
-    <md-button class="md-fab md-primary md-hue-1 projectButton"
-                style="position: absolute; top: 90px; right:60px; z-index: 4;"
-                ng-click="fab($event)" aria-label="opciones">
+    <md-card-content>
+        <h2 class="md-title">{{project.title}}
+            <small>
+            </small>
+        </h2>
+        <p>
+            {{project.description}}
+        </p>
+    </md-card-content>
+    <div class="md-actions" layout="row" layout-align="end center">
+        <md-button class="md-icon-button">
             <md-tooltip>
-              Participa
+                Me gusta
             </md-tooltip>
-            <md-icon md-svg-src="human"></md-icon>
-    </md-button>
+            {{project.likes.length}} <md-icon md-svg-icon="heart"></md-icon>
+        </md-button>
+        <md-button class="md-icon-button">
+            <md-tooltip>
+                Seguir
+            </md-tooltip>
+            <md-icon md-svg-icon="plus"></md-icon>
+        </md-button>
+    </div>
+</md-card>
+
+<md-card style="width:70%; position: relative;"
+class="md-whiteframe-z3">
+<md-card-content>
+    <h3 class="md-title">Propuestas
+        <small>
+        </small>
+    </h3>
+
+    <md-list style="text-align: left;">
+        <md-list-item class="md-2-line">
+            <img ng-src="{{todos[0].face}}?20" class="md-avatar" alt="{{todos[0].who}}">
+            <div class="md-list-item-text">
+                <h3>Title</h3>
+                <p>Text</p>
+            </div>
+            <md-button class="md-icon-button">
+                <md-tooltip>
+                    Vota
+                </md-tooltip>
+                {{project.likes.length}}
+                <md-icon md-svg-icon="star-outline"></md-icon>
+            </md-button>
+        </md-list-item>
+    </md-list>
+
+</md-card-content>
+</md-card>
+
+<md-card style="width:70%; position: relative;"
+class="md-whiteframe-z3">
+<md-card-content>
+    <h2 class="md-title">Preguntas
+        <small>
+        </small>
+    </h2>
+
+    <md-list style="text-align: left;">
+        <md-list-item class="md-2-line">
+            <img ng-src="{{todos[0].face}}?20" class="md-avatar" alt="{{todos[0].who}}">
+            <div class="md-list-item-text">
+                <h3>Title</h3>
+                <p>Text</p>
+            </div>
+            <md-button class="md-icon-button">
+                <md-tooltip>
+                    Vota
+                </md-tooltip>
+                {{project.likes.length}}
+                <md-icon md-svg-icon="star-outline"></md-icon>
+            </md-button>
+        </md-list-item>
+    </md-list>
+</md-card-content>
+
+</md-card>
+
+<md-button class="md-fab md-primary md-hue-1 projectButton"
+style="position: absolute; top: 90px; right:60px; z-index: 4;"
+ng-click="fab($event)" aria-label="opciones">
+<md-tooltip>
+    Participa
+</md-tooltip>
+<md-icon md-svg-src="human"></md-icon>
+</md-button>
 </center>

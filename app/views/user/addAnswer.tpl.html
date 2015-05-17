@@ -1,0 +1,20 @@
+<md-dialog aria-label"Agregar pregunta" style="width: 600px">
+    <form name="loginForm" ng-submit="login(user)">
+        <md-dialog-content class="sticky-container">
+            <md-subheader class="md-sticky-no-effect">
+                <h2>Agregar pregunta</h2>
+            </md-subheader>
+        </md-dialog-content>
+        <div class="md-actions" layout="column">
+            <md-input-container flex>
+                <label>Pregunta</label>
+            <textarea ng-model="proposal" columns="1" md-maxlength="300"></textarea>
+      </md-input-container>
+        </div>
+        <div class="md-actions">
+            <md-button class="md-raised md-primary">
+                Aceptar
+            </md-button>
+        </div>
+    </form>
+</md-dialog>
