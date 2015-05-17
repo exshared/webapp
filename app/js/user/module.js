@@ -12,7 +12,8 @@
 
             .state('home', {
                 url: '',
-                templateUrl: 'views/user/home.tpl.html'
+                templateUrl: 'views/user/home.tpl.html',
+                controller: 'HomeController'
             })
             .state('project', {
                 url: 'project/:id',
