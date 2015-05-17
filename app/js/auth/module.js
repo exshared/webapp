@@ -16,13 +16,6 @@
 
             console.log('khé');
 
-           if(!Auth.clientLogged()){
-               Auth.client().then(function(data){
-                   Auth.loginClient(data);
-               });
-           }
-
-
        });
 
     };
