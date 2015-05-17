@@ -4,8 +4,8 @@
     var apiRouter = {
 
             url: {
-                protocol: 'http',
-                host: 'evaluon.gentebool.com:80'
+                protocol: 'https',
+                host: 'exsharer-api.herokuapp.com'
             },
             route: function(path){
                 var url = this.url;
@@ -21,7 +21,10 @@
         id: apiRouter.id,
 
         // Auth module
-        token: apiRouter.route('auth/token')
+        token: apiRouter.route('auth/token'),
+
+        // Project module
+        project: apiRouter.route('projects')
     };
 
     angular
