@@ -14,7 +14,7 @@
 
         $rootScope.$on('$stateChangeStart', function(event, toState, toParams){
 
-            console.log('khé');
+            console.log('Developed by Bool Inc');
 
        });
 

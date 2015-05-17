@@ -38,11 +38,10 @@ class="md-whiteframe-z3">
     </h3>
 
     <md-list style="text-align: left;">
-        <md-list-item class="md-2-line">
+        <md-list-item class="md-2-line" ng-repeat="proposal in project.proposals">
             <img ng-src="{{todos[0].face}}?20" class="md-avatar" alt="{{todos[0].who}}">
             <div class="md-list-item-text">
-                <h3>Title</h3>
-                <p>Text</p>
+                <p>{{proposal.description}}</p>
             </div>
             <md-button class="md-icon-button">
                 <md-tooltip>
@@ -64,13 +63,11 @@ class="md-whiteframe-z3">
         <small>
         </small>
     </h2>
-
     <md-list style="text-align: left;">
-        <md-list-item class="md-2-line">
+        <md-list-item class="md-2-line" ng-repeat="question in project.questions">
             <img ng-src="{{todos[0].face}}?20" class="md-avatar" alt="{{todos[0].who}}">
             <div class="md-list-item-text">
-                <h3>Title</h3>
-                <p>Text</p>
+                <p>{{question.description}}</p>
             </div>
         </md-list-item>
     </md-list>

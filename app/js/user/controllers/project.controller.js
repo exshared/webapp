@@ -24,10 +24,9 @@
         };
 
         function getProject(){
-            
+
             Project.get(project).then(function(data){
                 $scope.project = data;
-                console.log(data);
             });
         }
 

@@ -8,7 +8,6 @@
     function SingupController($scope){
 
         $scope.singup = function(user){
-            console.log(user);
         };
     };
 })();
