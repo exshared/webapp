@@ -27,7 +27,9 @@
         project: apiRouter.route('projects'),
 
         //Users
-        user: apiRouter.route('users')
+        user: apiRouter.route('users'),
+
+        proposal: apiRouter.route('proposals')
     };
 
     angular

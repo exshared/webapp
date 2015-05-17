@@ -5,7 +5,7 @@
         .module('exsharer.user')
         .controller('ProjectOptionsController', UserOptionsController);
 
-    function UserOptionsController($scope, $mdDialog){
+    function UserOptionsController($scope, $mdDialog, $mdBottomSheet){
 
         $scope.items = [
             { name: 'Propuesta', icon: 'pencil-box' },
@@ -20,9 +20,11 @@
 
                 $mdDialog.show({
                     templateUrl: 'views/user/addProposal.tpl.html',
+                    controller: 'AddProposalController',
                     clickOutsideToClose: true,
                     focusOnOpen: true,
-                    targetEvent : $event
+                    targetEvent : $event,
+                    onComplete: onComplete
                 });
 
             }
@@ -32,7 +34,8 @@
                     templateUrl: 'views/user/addAnswer.tpl.html',
                     clickOutsideToClose: true,
                     focusOnOpen: true,
-                    targetEvent : $event
+                    targetEvent : $event,
+                    onComplete: onComplete
                 });
 
             }
@@ -42,6 +45,10 @@
             if($index == 3){
 
             }
+
+            function onComplete(){
+                $mdBottomSheet.hide();
+            };
         };
 
     };
