@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('exsharer.user', ['ui.router'])
+        .module('exsharer.user', ['ui.router', 'angularReverseGeocode'])
         .config(config)
         .run(run);
 
