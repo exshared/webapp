@@ -5,19 +5,15 @@
         </md-button>
         {{menu}}
         <h2>
-          <span>{{title}}</span>
+          <a ui-sref="home"><span>{{title}}</span></a>
         </h2>
         <span flex></span>
         <div ng-transclude>
 
         </div>
-        <md-button class="md-icon-button" aria-label="More" ng-click="options()"
-                    ng-if="!isAuth()">
+        <md-button class="md-icon-button" aria-label="More" ng-click="options()">
           <md-icon md-svg-icon="more_vert"></md-icon>
         </md-button>
-        <md-button class="md-icon-button" aria-label="More" ng-click="options()"
-                    ng-if="isAuth()">
-          <md-icon md-svg-icon="account"></md-icon>
-        </md-button>
+
       </div>
 </md-toolbar>
