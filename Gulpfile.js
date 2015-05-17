@@ -69,7 +69,7 @@ gulp.task('templates', function(){
     gulp.src('./app/views/**/*.tpl.html')
     .pipe(templateCache({
         root: 'views/',
-        module: 'evaluon.templates',
+        module: 'exsharer.templates',
         standalone: true
     }))
     .pipe(gulp.dest('./app/js/templates'));

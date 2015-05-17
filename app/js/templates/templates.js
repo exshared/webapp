@@ -1,0 +1,1 @@
+angular.module("exsharer.templates", []).run(["$templateCache", function($templateCache) {$templateCache.put("views/home.tpl.html","<h1>Hola mundito</h1>\n");}]);
