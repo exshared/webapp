@@ -1,12 +1,26 @@
-<md-dialog aria-label="Mango (Fruit)">
-    <form>
+<md-dialog aria-label"Iniciar sesión" style="width: 350px">
+    <form name="loginForm" ng-submit="login(user)">
         <md-dialog-content class="sticky-container">
             <md-subheader class="md-sticky-no-effect">
                 <h2>Iniciar sesión</h2>
             </md-subheader>
         </md-dialog-content>
-        <div class="md-actions" layout="row">
-
+        <div class="md-actions" layout="column">
+            <md-input-container class="md-icon-float" >
+                <label>Usuario</label>
+                <md-icon md-svg-src="account" class="name"></md-icon>
+                <input ng-model="user.username" type="text">
+            </md-input-container>
+            <md-input-container class="md-icon-float">
+                <label>Contraseña</label>
+                <md-icon md-svg-src="key" class="name"></md-icon>
+                <input type="password" ng-model="user.password">
+            </md-input-container>
+        </div>
+        <div class="md-actions">
+            <md-button class="md-raised md-primary">
+                Aceptar
+            </md-button>
         </div>
     </form>
 </md-dialog>
