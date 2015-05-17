@@ -31,6 +31,8 @@
 
                 return {
                     grant_type: 'password',
+                    client_id: this.client.id,
+                    client_secret: this.client.secret,
                     username: user,
                     password: CryptoJS.SHA1(password).toString()
                 }
