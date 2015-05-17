@@ -1,0 +1,18 @@
+<md-toolbar ng-class='{"md-tall": size == "tall"}'>
+      <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" aria-label="Settings" ng-if="menu">
+          <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+        </md-button>
+        {{menu}}
+        <h2>
+          <span>{{title}}</span>
+        </h2>
+        <span flex></span>
+        <div ng-transclude>
+
+        </div>
+        <md-button class="md-icon-button" aria-label="More">
+          <md-icon md-svg-icon="img/icons/more_vert.svg"></md-icon>
+        </md-button>
+      </div>
+</md-toolbar>
