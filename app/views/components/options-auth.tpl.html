@@ -1,5 +1,12 @@
 <md-bottom-sheet class="md-list md-has-header">
-  <md-subheader><h3>{{user.email}}</h3></md-subheader>
+  <md-subheader>
+      <h3>
+          {{user.name.first}} {{user.name.last}}
+          <p style="line-height:1px;">
+              <small style="font-weight: normal; ">{{user.email}}</small>
+          </p>
+      </h3>
+      </md-subheader>
   <md-list>
     <md-list-item ng-repeat="item in items">
       <md-button class="md-list-item-content" ng-click="action($index, $event)">
