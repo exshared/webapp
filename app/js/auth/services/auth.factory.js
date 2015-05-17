@@ -24,16 +24,12 @@
             },
 
             password: function(username, password){
-                var client = this.clientLogged(),
-                            tokenType = client.token_type,
-                            token = client.access_token;
 
                 return $http({
                     method: 'post',
                     url: api.token,
                     headers: {
                         'Content-Type': headers.urlencoded,
-                        Authorization: headers.authorization(tokenType, token)
                     },
                     data: $.param(access.password(username, password)),
                 }).then(function(response){
