@@ -22,6 +22,8 @@
     "angular-local-storage": "~0.2.0",
     "jakubzapletal-crypto-js": "~3.1.0",
     "jquery": "~2.1.4",
-    "string-formatter": "~0.0.2"
+    "string-formatter": "~0.0.2",
+    "ngUnderscore": "*",
+    "angular-reverse-geocode": "*"
   }
 }

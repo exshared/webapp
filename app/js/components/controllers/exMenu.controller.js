@@ -15,46 +15,82 @@
             template = template + '.tpl.html';
 
             $mdBottomSheet.show({
-                templateUrl: 'views/components/options-no-auth.tpl.html',
+                templateUrl: template,
                 controller: 'OptionsController',
                 targetEvent: $event
             });
         };
-
-        $scope.isAuth = Auth.userLogged;
     };
 
-    function OptionsController($scope, $mdDialog, $mdBottomSheet){
+    function OptionsController($scope, $mdDialog, $mdBottomSheet, Auth, User){
 
-        $scope.items = [
-            { name: 'Iniciar Sesión', icon: 'account' },
-            { name: 'Registrarse', icon: 'account-multiple-plus' }
-        ];
+        if(Auth.userLogged()){
 
-        $scope.action = function(index, $event){
+            User.me().then(function(data){
+                $scope.user = data;
+            });
 
-            $mdBottomSheet.hide()
+            $scope.items = [
+                { name: 'Agregar proyecto', icon: 'border-color' },
+                { name: 'Cerrar Sesión', icon: 'key-remove' }
+            ];
 
-            if(index == 0){
+            $scope.action = function(index, $event){
 
-                $mdDialog.show({
-                    controller: 'LoginController',
-                    templateUrl: 'views/auth/login.tpl.html',
-                    clickOutsideToClose: true,
-                    focusOnOpen: true,
-                    targetEvent : $event
-                });
-            }
-            if(index == 1){
+                $mdBottomSheet.hide()
 
-                $mdDialog.show({
-                    controller: 'SingupController',
-                    templateUrl: 'views/auth/singup.tpl.html',
-                    clickOutsideToClose: true,
-                    focusOnOpen: true,
-                    targetEvent : $event
-                });
+                if(index == 0){
+
+                    $mdDialog.show({
+                        controller: 'LoginController',
+                        templateUrl: 'views/auth/login.tpl.html',
+                        clickOutsideToClose: true,
+                        focusOnOpen: true,
+                        targetEvent : $event
+                    });
+                }
+                if(index == 1){
+
+                    Auth.logout();
+                }
             }
         }
+        else{
+
+            $scope.items = [
+                { name: 'Iniciar Sesión', icon: 'account' },
+                { name: 'Registrarse', icon: 'account-multiple-plus' }
+            ];
+
+            $scope.action = function(index, $event){
+
+                $mdBottomSheet.hide()
+
+                if(index == 0){
+
+                    $mdDialog.show({
+                        controller: 'LoginController',
+                        templateUrl: 'views/auth/login.tpl.html',
+                        clickOutsideToClose: true,
+                        focusOnOpen: true,
+                        targetEvent : $event
+                    });
+                }
+                if(index == 1){
+
+                    $mdDialog.show({
+                        controller: 'SingupController',
+                        templateUrl: 'views/auth/singup.tpl.html',
+                        clickOutsideToClose: true,
+                        focusOnOpen: true,
+                        targetEvent : $event
+                    });
+                }
+            }
+        }
+
+
+
+
     };
 })();

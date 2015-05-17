@@ -39,3 +39,8 @@ md-grid-list {
   background: #ff8a80; }
 md-grid-tile {
   transition: all 400ms ease-out 50ms; }
+
+a:link {
+    text-decoration: none;
+    color: inherit
+};

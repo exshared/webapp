@@ -6,19 +6,23 @@
     <md-grid-tile class="gray"
         md-rowspan="3" md-colspan="2" md-colspan-sm="1">
       <md-grid-tile-footer>
-        <a ui-sref="project">
-            <h3>Title 1</h3>
+        <a ui-sref="project({id: projects[0]._id})">
+            <h3>{{projects[0].title}}</h3>
         </a>
       </md-grid-tile-footer>
     </md-grid-tile>
     <md-grid-tile class="green">
       <md-grid-tile-footer>
-        <h3>Title 2</h3>
+          <a ui-sref="project({id: projects[1]._id})">
+              <h3>{{projects[1].title}}</h3>
+          </a>
       </md-grid-tile-footer>
     </md-grid-tile>
     <md-grid-tile class="yellow">
       <md-grid-tile-footer>
-        <h3>Title 3</h3>
+          <a ui-sref="project({id: projects[2]._id})">
+              <h3>{{projects[2].title}}</h3>
+          </a>
       </md-grid-tile-footer>
     </md-grid-tile>
     <md-grid-tile class="blue"

@@ -1,7 +1,8 @@
 <md-bottom-sheet class="md-list md-has-header">
+  <md-subheader><h3>{{user.email}}</h3></md-subheader>
   <md-list>
     <md-list-item ng-repeat="item in items">
-      <md-button class="md-list-item-content" ng-click="listItemClick($index)">
+      <md-button class="md-list-item-content" ng-click="action($index, $event)">
         <md-icon md-svg-src="{{item.icon}}"></md-icon>
         <span class="md-inline-list-icon-label">{{ item.name }}</span>
       </md-button>

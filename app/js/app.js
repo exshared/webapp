@@ -27,6 +27,9 @@
             .icon('human', 'img/icons/human.svg', 30)
             .icon('pencil-box', 'img/icons/pencil-box.svg', 30)
             .icon('help', 'img/icons/help.svg', 30)
+            .icon('heart', 'img/icons/heart.svg')
+            .icon('border-color', 'img/icons/border-color.svg')
+            .icon('key-remove', 'img/icons/key-remove.svg')
             .icon('key', 'img/icons/key.svg', 24);
 
     };

@@ -13,6 +13,8 @@
 
   <link rel="stylesheet" href="lib/mdi/css/materialdesignicons.css">
 
+  <script src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
+
   <!-- inject:css -->
 
   <link rel="stylesheet" href="/styles/main.css">
@@ -39,6 +41,9 @@
   <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
   <script src="lib/angular-local-storage/dist/angular-local-storage.js"></script>
   <script src="lib/string-formatter/string-formatter.js"></script>
+  <script src="lib/underscore/underscore.js"></script>
+  <script src="lib/ngUnderscore/ng-underscore.js"></script>
+  <script src="lib/angular-reverse-geocode/angular-reverse-geocode.js"></script>
   <!-- endbower -->
 
   <script src="lib/jakubzapletal-crypto-js/src/core.js"></script>
@@ -78,7 +83,11 @@
 
   <script src="/js/user/controllers/project.controller.js"></script>
 
+  <script src="/js/user/controllers/projectOptions.controller.js"></script>
+
   <script src="/js/user/services/projects.factory.js"></script>
+
+  <script src="/js/user/services/user.factory.js"></script>
 
   <!-- endinject -->
 

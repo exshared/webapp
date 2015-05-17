@@ -5,11 +5,30 @@
     position: relative;"
     class="md-whiteframe-z3">
         <md-card-content>
-            <h2 class="md-title">Paracosm</h2>
+            <h2 class="md-title">{{project.title}}
+                <small>
+                </small>
+            </h2>
                 <p>
-                  The titles of Washed Out's breakthrough song and the first single from Paracosm share the
-                  two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+                    {{project.description}}
                 </p>
         </md-card-content>
+        <div class="md-actions" layout="row" layout-align="end center">
+            <md-button class="md-icon-button">
+                {{project.likes.length}} <md-icon md-svg-icon="heart"></md-icon>
+            </md-button>
+            <md-button class="md-icon-button">
+                <md-icon md-svg-icon="plus"></md-icon>
+            </md-button>
+      </div>
     </md-card>
+
+    <md-button class="md-fab md-primary md-hue-1 projectButton"
+                style="position: absolute; top: 90px; right:60px; z-index: 4;"
+                ng-click="fab($event)" aria-label="opciones">
+            <md-tooltip>
+              Participa
+            </md-tooltip>
+            <md-icon md-svg-src="human"></md-icon>
+    </md-button>
 </center>
