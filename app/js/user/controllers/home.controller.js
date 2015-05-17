@@ -8,6 +8,7 @@
     function HomeController($scope, Project){
 
         $scope.projects = [];
+
         getProjects();
 
         function getProjects(){
