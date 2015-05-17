@@ -9,17 +9,29 @@ var gulp = require('gulp'),
     minifyCss = require('gulp-minify-css'),
     useref = require('gulp-useref'),
     uglify = require('gulp-uglify'),
-    uncss = require('gulp-uncss');
+    uncss = require('gulp-uncss'),
+    browserSync = require('browser-sync')
+
 
 gulp.task('webserver', function(){
-    connect.server({
-        root:'./app',
-        hostname: '0.0.0.0',
-        port: 9000,
-        liveReload: true,
-        middleware: function(connect, opt) {
-            return [ historyApiFallback ];
-        }
+    browserSync({
+      server: {
+        baseDir: __dirname + '/app/',
+        directory: true
+      },
+      ghostMode: false,
+      notify: false,
+      debounce: 200,
+      port: 9000,
+      startPath: 'index.html'
+    });
+
+    gulp.watch([
+      __dirname + '/app/**/*.{js,html,css,svg,png,gif,jpg,jpeg}'
+    ], {
+      debounceDelay: 400
+    }, function() {
+      browserSync.reload();
     });
 });
 
