@@ -3,7 +3,7 @@
 
     angular
     .module('exsharer', [
-        'ngMaterial', 'ui.router', 'exsharer.templates'
+        'ngMaterial', 'ui.router', 'exsharer.templates', 'exsharer.components'
         ])
 
     .config(config)
