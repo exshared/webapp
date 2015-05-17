@@ -41,13 +41,6 @@
 
                 if(index == 0){
 
-                    $mdDialog.show({
-                        controller: 'LoginController',
-                        templateUrl: 'views/auth/login.tpl.html',
-                        clickOutsideToClose: true,
-                        focusOnOpen: true,
-                        targetEvent : $event
-                    });
                 }
                 if(index == 1){
 
