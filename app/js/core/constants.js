@@ -19,9 +19,13 @@
     .constant(
         'access', {
             client: {
-                grant_type: 'client_credentials',
-                client_id: 'administrator',
-                client_secret: 'kv0Ls8xoIFPdE2GXMK5fodQsAEBV5GzzINZOA0NX99E='
+                "__v": 0,
+                "name": "web",
+                "description": "Web Client",
+                "_id": "55584f576f416b9503f449b2",
+                "created": "2015-05-17T08:20:39.340Z",
+                "secret": "eXISsE6kEwuAQZVBe+GSs/E9pB6TjThbghyvwtixf6sS7kbAVLaPpnTF9RLgp743aH8XP62OxG4q1FhEntQh7w==",
+                "id": "NOTgK9szOPIgojbqwSIcbgJaBMMtw3tbVT1+loO3z2AJIW7s09rsOGqU3pFUmMrwDPYISZ3V+6otq1RyXTFvuQ=="
             },
             password: function(user, password){
 
