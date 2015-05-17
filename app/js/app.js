@@ -4,27 +4,21 @@
     angular
     .module('exsharer', [
         'ngMaterial', 'ui.router', 'exsharer.templates', 'exsharer.components',
-        'exsharer.auth'
+        'exsharer.auth', 'exsharer.user'
         ])
 
     .config(config)
     .run(run);
 
-    function config($stateProvider, $mdIconProvider){
-
+    function config($mdIconProvider, $locationProvider){
+        
         //icons
-
         $mdIconProvider
             .icon('account-plus', 'img/icons/account-plus.svg', 24)
             .icon('account-multiple-plus', 'img/icons/account-multiple-plus.svg', 24)
-            .icon('account', 'img/icons/account.svg', 24);
+            .icon('account', 'img/icons/account.svg', 24)
+            .icon('key', 'img/icons/key.svg', 24);
 
-        $stateProvider
-
-            .state('home', {
-                url: '',
-                templateUrl: 'views/home.tpl.html'
-            });
     };
 
     function run(){
