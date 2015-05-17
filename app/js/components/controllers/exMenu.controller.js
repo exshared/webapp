@@ -20,6 +20,8 @@
                 targetEvent: $event
             });
         };
+
+        $scope.isAuth = Auth.userLogged;
     };
 
     function OptionsController($scope, $mdDialog, $mdBottomSheet){
