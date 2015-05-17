@@ -5,7 +5,8 @@
         md-gutter="12px" md-gutter-gt-sm="8px" >
     <md-grid-tile class="gray"
         md-rowspan="3" md-colspan="2" md-colspan-sm="1"
-        ng-style="{'background-image': 'url('+projects[0].photo+')'}">
+        ng-style="{'background-image': 'url('+projects[0].photo+')'}"
+        style="background-position: center">
       <md-grid-tile-footer>
         <a ui-sref="project({id: projects[0]._id})">
             <h3>{{projects[0].title}}</h3>
@@ -13,7 +14,8 @@
       </md-grid-tile-footer>
     </md-grid-tile>
     <md-grid-tile class="green"
-    ng-style="{'background-image': 'url('+projects[1].photo+')'}">
+    ng-style="{'background-image': 'url('+projects[1].photo+')'}"
+    style="background-position: center">
       <md-grid-tile-footer>
           <a ui-sref="project({id: projects[1]._id})">
               <h3>{{projects[1].title}}</h3>
@@ -21,7 +23,8 @@
       </md-grid-tile-footer>
     </md-grid-tile>
     <md-grid-tile class="yellow"
-        ng-style="{'background-image': 'url('+projects[2].photo+')'}">
+        ng-style="{'background-image': 'url('+projects[2].photo+')'}"
+        style="background-position: center">
       <md-grid-tile-footer>
           <a ui-sref="project({id: projects[2]._id})">
               <h3>{{projects[2].title}}</h3>
@@ -30,6 +33,7 @@
     </md-grid-tile>
     <md-grid-tile class="blue"
         ng-style="{'background-image': 'url('+projects[3].photo+')'}"
+        style="background-position: center"
         md-rowspan="2">
       <md-grid-tile-footer>
           <a ui-sref="project({id: projects[3]._id})">
@@ -39,6 +43,7 @@
     </md-grid-tile>
     <md-grid-tile class="red"
         ng-style="{'background-image': 'url('+projects[4].photo+')'}"
+        style="background-position: center"
         md-rowspan="2" md-colspan="2" md-colspan-sm="1">
       <md-grid-tile-footer>
           <a ui-sref="project({id: projects[4]._id})">
@@ -48,6 +53,7 @@
     </md-grid-tile>
     <md-grid-tile class="green"
         ng-style="{'background-image': 'url('+projects[5].photo+')'}"
+        style="background-position: center"
         md-rowspan="2" >
       <md-grid-tile-footer>
           <a ui-sref="project({id: projects[5]._id})">
