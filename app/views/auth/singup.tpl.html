@@ -1,12 +1,43 @@
-<md-dialog aria-label="Mango (Fruit)">
-    <form>
+<md-dialog aria-label"Iniciar sesión" style="width: 450px">
+    <form name="singupForm" ng-submit="singup(user)">
         <md-dialog-content class="sticky-container">
             <md-subheader class="md-sticky-no-effect">
-                <h2>Registrarse</h2>
+                <h2>Registro</h2>
             </md-subheader>
         </md-dialog-content>
-        <div class="md-actions" layout="row">
-
+        <div class="md-actions" layout="column">
+            <md-input-container>
+                <label>Usuario</label>
+                <input ng-model="user.username" type="text">
+            </md-input-container>
+            <md-input-container>
+                <label>Correo</label>
+                <input ng-model="user.email" type="email">
+            </md-input-container>
+            <md-input-container>
+                <label>Nombres</label>
+                <input ng-model="user.name.first" type="text">
+            </md-input-container>
+            <md-input-container>
+                <label>Apellidos</label>
+                <input ng-model="user.name.last" type="text">
+            </md-input-container>
+            <md-input-container>
+                <label>Fecha de nacimiento</label>
+                <input ng-model="user.birthday" type="date">
+            </md-input-container>
+            <md-input-container>
+                <label>Contraseña</label>
+                <input type="password" ng-model="user.password">
+            </md-input-container>
+        </div>
+        <div class="md-actions">
+            <md-button class="md-mini md-primary">
+              <md-icon md-svg-src="facebook" style="color: #3b5998;"></md-icon>
+            </md-button>
+            <md-button class="md-raised md-primary">
+                Aceptar
+            </md-button>
         </div>
     </form>
 </md-dialog>
